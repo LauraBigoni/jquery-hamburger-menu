@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 20px;
+  font-family: 'Rubik', sans-serif;
+}
+
+h1,
+h2 {
+  margin-bottom: 20px;
+}
+
+main {
+  margin-top: 100px;
+  padding: 10px;
+}
+.content {
+  display: flex;
+}
+.col:not(:last-child) {
+  margin-right: 20px;
+}
+.logo {
+  padding: 0 10px;
+  line-height: 50px;
+}
+.menu--mobile{
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100vh;
+  padding: 100px 20px 20px;
+  color: white;
+}
+.menu--mobile.visible {
+  display: block;
+  background-color: blue;
+  animation-name: bgFadeIn;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+.menu--mobile ul {
+  list-style: none;
+}
+.menu--mobile ul li{
+ margin-bottom: 10px;
+}
+
+.hamburger {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 3;
+}
+.hamburger.is-active.white .hamburger-inner,
+.hamburger.is-active.white .hamburger-inner:after,
+.hamburger.is-active.white .hamburger-inner:before {
+  background-color: white;
+}
+
+/*Animation*/
+@keyframes bgFadeIn {
+  from {
+      background-color: white
+  }
+  to {
+      background-color: blue
+  }
+}
